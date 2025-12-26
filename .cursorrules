@@ -1,0 +1,97 @@
+# NestJS Rate Limiter - Cursor Rules
+
+## Project Structure
+- `packages/nestjs-rate-limit/` - Main NestJS rate limiting package
+- `docs/` - React documentation application
+- `mock-server/` - Mock API server for testing and examples
+
+## Code Style
+
+### TypeScript
+- Use strict TypeScript with proper types
+- Prefer interfaces over types for public APIs
+- Use `async/await` over promises
+- Always handle errors appropriately
+- Use meaningful variable and function names
+
+### NestJS Package
+- Follow NestJS conventions and best practices
+- Use decorators for metadata
+- Implement proper dependency injection
+- Export all public APIs through `src/index.ts`
+- Use `@Injectable()` for services and guards
+- Use `@Global()` for modules that should be available everywhere
+- Document public APIs with JSDoc comments
+
+### React Documentation
+- Use functional components with hooks
+- Follow React best practices
+- Use TypeScript for all components
+- Keep components small and focused
+- Use Tailwind CSS utility classes
+- Follow shadcn/ui component patterns
+
+## File Naming
+- Use kebab-case for file names: `rate-limit.guard.ts`
+- Use PascalCase for classes and components: `RateLimitGuard`
+- Use camelCase for functions and variables: `getRemaining`
+
+## Testing
+- Write unit tests for strategies
+- Test storage implementations
+- Test guard behavior
+- Test priority system (Route > Controller > Global)
+- Use descriptive test names
+
+## Documentation
+- Keep README files up to date
+- Document all public APIs
+- Include usage examples
+- Update docs when adding features
+
+## Git
+- Use conventional commits
+- Keep commits focused and atomic
+- Write clear commit messages
+
+## Dependencies
+- Keep dependencies minimal
+- Use peer dependencies for NestJS packages
+- Mark optional dependencies (like ioredis) as optionalDependencies
+- Keep dev dependencies separate from production
+
+## Rate Limiting Strategies
+- All strategies must implement `RateLimitStrategy` interface
+- Strategies should be stateless (state in storage)
+- Handle edge cases (zero values, negative values, etc.)
+- Return accurate remaining counts and reset times
+
+## Storage
+- All storage implementations must implement `RateLimitStorage` interface
+- Storage should handle TTL properly
+- Clean up expired entries when possible
+- Handle connection errors gracefully
+
+## Priority System
+- Route-level decorators override controller-level
+- Controller-level decorators override global
+- If no strategy is found, allow the request (no rate limiting)
+
+## Error Handling
+- Return HTTP 429 for rate limit exceeded
+- Include rate limit headers in all responses
+- Use meaningful error messages
+- Log errors appropriately
+
+## Performance
+- Minimize storage operations
+- Use efficient algorithms
+- Consider Redis for distributed systems
+- Clean up expired entries periodically
+
+## Security
+- Never expose sensitive information in error messages
+- Validate all inputs
+- Use secure defaults
+- Handle edge cases securely
+

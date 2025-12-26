@@ -1,0 +1,38 @@
+{
+  "name": "@kitstack/rate-limitter",
+  "version": "1.0.0",
+  "description": "A flexible, production-ready rate-limiting package for NestJS with multiple algorithms and Redis support.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "publishConfig": {
+  "access": "public"
+},
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ALIRAZA47/nest-rate-limitter.git"
+  },
+  "keywords": [
+    "rate",
+    "limitter",
+    "rate-limitter",
+    "nest",
+    "rate-limitter",
+    "nest",
+    "rate",
+    "limit",
+    "nest",
+    "rate",
+    "limitter"
+  ],
+  "author": "Ali Raza Khan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ALIRAZA47/nest-rate-limitter/issues"
+  },
+  "homepage": "https://github.com/ALIRAZA47/nest-rate-limitter#readme"
+}

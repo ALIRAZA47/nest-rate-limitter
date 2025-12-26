@@ -6,6 +6,7 @@ A flexible, production-ready rate-limiting package for NestJS with multiple algo
 
 - `packages/nestjs-rate-limit` - The main NestJS rate limiting package
 - `docs` - React documentation application
+- `mock-server` - Mock API server for testing and demonstrating rate limiting
 
 ## Getting Started
 
@@ -24,6 +25,16 @@ cd docs
 npm install
 npm run dev
 ```
+
+### Mock Server
+
+```bash
+cd mock-server
+npm install
+npm run dev
+```
+
+The mock server runs on `http://localhost:3001` and provides example endpoints demonstrating different rate limiting strategies.
 
 ## Features
 
